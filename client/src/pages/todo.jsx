@@ -33,7 +33,7 @@ function Todo() {
     if (file) {
       
       console.log(file)
-      const { url } = await fetch("http://localhost:5000/s3-upload").then(res => res.json())
+      const { url } = await fetch("/s3-upload").then(res => res.json())
       console.log({url})
 
       await fetch(url, {

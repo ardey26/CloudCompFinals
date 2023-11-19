@@ -1,8 +1,7 @@
-import * as express from 'express';
-import cors from 'cors';
-import * as path from 'path';
-
-import { generateUploadURL } from './s3.js';
+const express = require("express");
+const cors = require("cors");
+const path  = require('path');
+const { generateUploadURL }  = require('./s3.js')
 
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "../client/dist");
@@ -16,7 +15,6 @@ app.use(cors());
 app.use(express.static(buildPath))
 
 app.get("/s3-upload", async function(req, res) {
-  console.log("TOUCHED")
   const url = await generateUploadURL()
   res.send({url})
 })
