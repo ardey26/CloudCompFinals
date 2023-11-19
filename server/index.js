@@ -1,8 +1,8 @@
-const express = require("express");
-const cors = require("cors");
-const path = require("path");
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
 
-const { generateUploadURL } = require('./s3.js')
+import generateUploadURL from './s3.js';
 
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "../client/dist");
