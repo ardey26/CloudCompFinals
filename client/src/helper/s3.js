@@ -1,4 +1,6 @@
-import AWS from 'aws-sdk'
+import { S3Client } from "@aws-sdk/client-s3";
+
+
 
 const S3_BUCKET ='cloudcompfinals';
 const REGION ='ap-southeast-1';
