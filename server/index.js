@@ -1,8 +1,8 @@
-import express from 'express';
+import * as express from 'express';
 import cors from 'cors';
-import path from 'path';
+import * as path from 'path';
 
-import generateUploadURL from './s3.js';
+import { generateUploadURL } from './s3.js';
 
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "../client/dist");
