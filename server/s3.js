@@ -1,6 +1,6 @@
 
 import aws from 'aws-sdk'
-import crypto from 'crypto'
+import * as crypto from 'crypto'
 import { promisify } from "util"
 const randomBytes = promisify(crypto.randomBytes)
 
