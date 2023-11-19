@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { S3Client } from "@aws-sdk/client-s3";
 
 function App() {
   const [item, setItem] = useState("");
@@ -12,6 +13,9 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!item) {
+      return
+    }
     const stateObject = { id: counter, text: item }
     setSaved([...saved, stateObject]);        
     setItem("");    
